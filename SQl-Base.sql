@@ -19,7 +19,22 @@ create table score(
     id varchar(10) PRIMARY key,
     student_id varchar(10),
     subject_id varchar(10),
-    score int,
+    score double,
     FOREIGN key(student_id) REFERENCES student(id),
     FOREIGN key(subject_id) REFERENCES subject(id)
 );
+
+insert into student values ('001','张三',18,'男');
+insert into student values ('002','李四',20,'女');
+
+insert into subject values ('1001','语文','王老师','本次考试比较简单');
+insert into subject values ('1002','数学','刘老师','本次考试比较难');
+
+insert into score values ('1','001','1001',80);
+insert into score values ('2','002','1002',60);
+insert into score values ('3','001','1001',70);
+insert into score values ('4','002','1002',60);
+
+select * from student;
+select * from subject;
+select * from score;
